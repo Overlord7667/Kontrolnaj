@@ -224,15 +224,13 @@ public class Game2 extends AppCompatActivity {
                 response = true;
             }
         }
+
         return response;
     }
 
     private boolean isBoxSelectable(int boxPosition){
-        boolean response = false;
+        boolean response = boxPositions[boxPosition] == 0;
 
-        if (boxPositions[boxPosition] == 0){
-            response = true;
-        }
         return  response;
     }
 
