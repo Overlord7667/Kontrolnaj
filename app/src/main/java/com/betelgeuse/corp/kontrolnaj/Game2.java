@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -163,9 +164,10 @@ public class Game2 extends AppCompatActivity {
             imageView.setImageResource(R.drawable.cross);
             if (checkPlayerWin()){
 
-                WinDialog winDialog = new WinDialog(Game2.this, playerOneName.getText().toString() + "has won the match", Game2.this);
+                WinDialog winDialog = new WinDialog(Game2.this, playerOneName.getText().toString() + " has won the match", Game2.this);
                 winDialog.setCancelable(false);
                 winDialog.show();
+                //Toast.makeText(this, "krestik win", Toast.LENGTH_LONG).show();
             } else if (totalSelectedBoxes == 9) {
 
                 WinDialog winDialog = new WinDialog(Game2.this, "It is a draw!", Game2.this);
@@ -182,9 +184,10 @@ public class Game2 extends AppCompatActivity {
             imageView.setImageResource(R.drawable.zero2);
             if (checkPlayerWin()){
 
-                WinDialog winDialog = new WinDialog(Game2.this, playerTwoName.getText().toString() + "has won the match", Game2.this);
+                WinDialog winDialog = new WinDialog(Game2.this, playerTwoName.getText().toString() + " has won the match", Game2.this);
                 winDialog.setCancelable(false);
                 winDialog.show();
+                //Toast.makeText(this, "Nuli win", Toast.LENGTH_LONG).show();
             } else if (selectedBoxPosition == 9) {
 
                 WinDialog winDialog = new WinDialog(Game2.this, "It is a draw!", Game2.this);
@@ -219,7 +222,6 @@ public class Game2 extends AppCompatActivity {
             if (boxPositions[combination[0]]
                     == playerTurn && boxPositions[combination[1]]
                     == playerTurn && boxPositions[combination[2]]
-                    == playerTurn && boxPositions[combination[3]]
                     == playerTurn){
                 response = true;
             }
