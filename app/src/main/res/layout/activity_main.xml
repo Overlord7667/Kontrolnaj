@@ -1,32 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/firstView">
 
-    <Button
-        android:id="@+id/new_game"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Game on bot"
-        android:onClick="gameOnBot"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <Button-->
+<!--        android:id="@+id/new_game"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Game on bot"-->
+<!--        android:onClick="gameOnBot"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <Button
-        android:id="@+id/game2person"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Game on 2 person"
-        android:onClick="game2Person"
-        app:layout_constraintBottom_toTopOf="@+id/new_game"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <Button-->
+<!--        android:id="@+id/game2person"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Game on 2 person"-->
+<!--        android:onClick="game2Person"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/new_game"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.942" />-->
+        <Button
+            android:id="@+id/startGame"
+            android:text="Start Game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+        <ToggleButton
+            android:id="@+id/On_Off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/startGame"
+            android:textOn="Game on computer"
+            android:textOff="Game on two Person"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/On_Off"
+            android:text="Please click choice of game"
+            android:id="@+id/text"
+            android:textSize="20sp"/>
+
+        <RadioGroup
+            android:id="@+id/backColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/text"
+            android:layout_margin="5dp">
+
+                <RadioButton
+                    android:id="@+id/red"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Red"/>
+
+                <RadioButton
+                    android:id="@+id/blu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Blu"/>
+
+                <RadioButton
+                    android:id="@+id/green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Green"/>
+
+                <RadioButton
+                    android:id="@+id/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Black"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/backColor"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:text="Choice background color"
+            android:layout_toStartOf="@id/backColor"
+            android:layout_marginTop="-100dp"/>
+
+        <Button
+            android:id="@+id/backgroundBtn"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="139dp"
+            android:layout_toEndOf="@+id/backColor"
+            android:text="Click"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/startGame"
+            android:layout_alignTop="@id/startGame"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="-40dp"
+            android:minHeight="48dp"
+            android:text="Color button" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_below="@id/On_Off"-->
+<!--            android:text="Game is two Person"-->
+<!--            android:id="@+id/twoPerson"-->
+<!--            android:textSize="20sp"/>-->
+</RelativeLayout>
