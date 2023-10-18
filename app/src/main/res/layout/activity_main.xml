@@ -113,13 +113,12 @@
             android:text="Click"/>
 
         <Switch
+            android:id="@+id/colorBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/startGame"
             android:layout_alignTop="@id/startGame"
             android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:layout_marginTop="-40dp"
             android:minHeight="48dp"
             android:text="Color button" />

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -80,6 +81,18 @@ public class MainActivity extends AppCompatActivity {
             }else if (radioButton3.isChecked()) {
                 Toast.makeText(this, "black", Toast.LENGTH_SHORT).show();
                 relativeLayout.setBackgroundColor(Color.BLACK);
+            }
+        });
+
+        Switch colorBtn = findViewById(R.id.colorBtn);
+        colorBtn.setOnClickListener(View ->{
+            if (colorBtn.isChecked()){
+                Toast.makeText(this, "Цвет изменён", Toast.LENGTH_SHORT).show();
+
+                //bt.setBackgroundResource(R.drawable.btn_style);
+                bt.setBackgroundColor(Color.RED);
+            }else {
+                bt.setBackgroundColor(Color.YELLOW);
             }
         });
     }
